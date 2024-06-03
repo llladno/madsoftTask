@@ -1,30 +1,72 @@
-# React + TypeScript + Vite
+# Название проекта
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Выполненное задание для madsoft на вакансию Frontend разработчика
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
+## Структура проекта
 
 ```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+src
+├── assets
+│ ├── base
+│ ├── blocks
+│ └── components
+│ ├── _button.scss
+│ └── _statusBar.scss
+├── components
+│ ├── common
+│ │ └── MButton.tsx
+│ └── layout
+├── store
+│ └── store.ts
+├── types
+│ └── types.ts
+├── App.scss
+├── App.tsx
+├── main.tsx
+└── vite-env.d.ts
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Как запустить проект
+
+1. Убедитесь, что у вас установлен [Node.js](https://nodejs.org/).
+
+2. Установите зависимости:
+    ```bash
+    npm install
+    ```
+3. Перейдите в папку с проектом
+   ```bash
+   cd madsoft
+   ```
+4. Запустите проект:
+    ```bash
+    npm run dev
+    ```
+
+4. Откройте браузер и перейдите по адресу [http://localhost:5173/](http://localhost:5173/) для просмотра проекта.
+
+## Описание структуры
+
+- **assets/**: Папка для хранения ассетов (изображения, стили и т.д.).
+  - **base/**: Основные стили и общие ресурсы.
+  - **blocks/**: Стили для блоков и компонентов.
+  - **components/**: Стили для компонентов.
+    - **_button.scss**: Стили для кнопок.
+    - **_statusBar.scss**: Стили для статусной строки.
+
+- **components/**: Папка с React-компонентами.
+  - **common/**: Общие компоненты, которые используются в разных частях приложения.
+    - **MButton.tsx**: Компонент кнопки.
+  - **layout/**: Компоненты для структуры макета.
+
+- **store/**: Папка с настройками хранилища состояния.
+  - **store.ts**: Основной файл хранилища.
+
+- **types/**: Папка для TypeScript типов.
+  - **types.ts**: Основные типы, используемые в проекте.
+
+- **App.scss**: Основные стили приложения.
+- **App.tsx**: Основной компонент приложения.
+- **main.tsx**: Точка входа в приложение.
+- **vite-env.d.ts**: Типы для Vite.
+
