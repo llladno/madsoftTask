@@ -1,0 +1,17 @@
+button {
+  background-color: $accent-color;
+  border: none;
+  padding: 10px 20px;
+  color: $white-color;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:disabled {
+    background-color: $grey-color;
+  }
+
+  &:hover{
+    opacity: 0.9;
+  }
+}
