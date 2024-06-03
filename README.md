@@ -36,7 +36,7 @@ src
     ```
 3. Перейдите в папку с проектом
    ```bash
-   cd madsoft
+   cd madsoftTask
    ```
 4. Запустите проект:
     ```bash
